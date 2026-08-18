@@ -1,0 +1,41 @@
+================================================================================
+                   GITHUB REST ASSURED TEST EXECUTION REPORT                    
+================================================================================
+Execution Date & Time : 2026-08-18 17:21:21
+Test Suite Name       : GitHub Repositories Tests
+Total Executed Tests  : 7
+Passed Tests          : 7
+Failed Tests          : 0
+================================================================================
+
+--------------------------------------------------------------------------------
+PASSED TESTS (7)
+--------------------------------------------------------------------------------
+1. [PASS] GetRepoTests :: testGetNonExistentRepository_NotFound (6330 ms)
+   Description : Verify GET /repos/{owner}/{repo} with non-existent repo returns 404 Not Found
+
+2. [PASS] GetRepoTests :: testGetPublicRepository_Success (1815 ms)
+   Description : Verify GET /repos/{owner}/{repo} returns 200 and correct repository details
+
+3. [PASS] GetRepoTests :: testGetRepository_SchemaValidation (984 ms)
+   Description : Verify GET /repos/{owner}/{repo} response conforms to JSON schema
+
+4. [PASS] ListReposTests :: testListUserRepositories_Pagination (641 ms)
+   Description : Verify GET /users/{username}/repos pagination with per_page query param
+
+5. [PASS] ListReposTests :: testListUserRepositories_Success (960 ms)
+   Description : Verify GET /users/{username}/repos returns 200 and list of public repositories
+
+6. [PASS] CreateRepoTests :: testCreateRepository_WithInvalidToken_Returns401 (724 ms)
+   Description : Verify POST /user/repos with invalid token returns 401 Unauthorized
+
+7. [PASS] CreateRepoTests :: testCreateRepository_WithoutAuth_Returns401 (489 ms)
+   Description : Verify POST /user/repos without authentication returns 401 Unauthorized
+
+--------------------------------------------------------------------------------
+FAILED TESTS (0)
+--------------------------------------------------------------------------------
+None
+================================================================================
+                              END OF REPORT                                     
+================================================================================
